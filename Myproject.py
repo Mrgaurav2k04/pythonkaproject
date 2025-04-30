@@ -11,6 +11,29 @@ sns.set_theme(style="darkgrid", palette="Set2", font_scale=1.2)
 plt.style.use("dark_background")
 # Load dataset
 df = pd.read_csv("ICRISAT-District Level Data.csv")
+print("Data Loaded successfully")
+
+# Data Exploration
+print("First 10 rows of the data frame\n", df.head(10))
+print("Data Frame Information\n", df.info())
+print("Statistical Description\n", df.describe())
+print("Shape of the data frame", df.shape, "\n")
+print("Columns of the data frame", df.columns, "\n")
+print("Missing values in the data frame\n", df.isnull().sum(), "\n")
+
+# Handle -1 values (treat as missing)
+df.replace(-1, 0, inplace=True)
+
+# Handle missing values
+df_filled = df.fillna(0)
+print("Data after filling missing values with 0\n", df_filled.head(), "\n")
+
+# Group by State and sum Total_tons
+grouped_data = df.groupby("State Name")["TOTAL CONSUMPTION (tons)"].sum()
+print("Total fertilizer consumption grouped by State\n", grouped_data, "\n")
+
+# Accessing a column
+print("Accessing Total_tons column\n", df["TOTAL CONSUMPTION (tons)"].head(), "\n")
 
 # Rename columns for clarity
 df.rename(columns={
@@ -113,7 +136,7 @@ plt.stackplot(yearly_npk["Year"],
               yearly_npk["Phosphate_tons"],
               yearly_npk["Potash_tons"],
               labels=["Nitrogen", "Phosphate", "Potash"],
-              colors=sns.color_palette("Set2", 3))
+              colors=sns.color_palette("Set1", 3))
 plt.title("Year-wise NPK Fertilizer Usage in India")
 plt.xlabel("Year")
 plt.ylabel("Total Usage (tons)")

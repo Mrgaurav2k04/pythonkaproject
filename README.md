@@ -1,7 +1,8 @@
 Fertilizer Consumption Analysis Project
-Overview
+**Overview**
 This project analyzes fertilizer consumption data at the district level in India, utilizing data from ICRISAT. The analysis includes trends over time, state-wise comparisons, and visualizations of Nitrogen, Phosphate, and Potash (NPK) usage.
-Features
+
+**Features**
 
 Visualizes total fertilizer consumption trends over the years.
 Identifies top-performing states based on average fertilizer usage.
@@ -11,7 +12,7 @@ Compares fertilizer consumption per hectare (NCA vs GCA).
 Offers a correlation matrix of usage metrics.
 Shows year-wise NPK fertilizer usage with a stacked area chart.
 
-Technologies Used
+**Technologies** **Used**
 
 Python: Core programming language.
 Pandas: Data manipulation and analysis.
@@ -19,7 +20,7 @@ NumPy: Numerical operations.
 Matplotlib: Plotting library.
 Seaborn: Statistical data visualization.
 
-Installation
+**Installation**
 
 Clone the repository:git clone https://github.com/yourusername/fertilizer-analysis.git
 
@@ -32,24 +33,24 @@ Install the required packages:pip install pandas numpy matplotlib seaborn
 
 Ensure the dataset ICRISAT-District Level Data.csv is in the project directory.
 
-Usage
+**Usage**
 
 Run the script:python Myproject.py
 
 
 The script will generate various plots and display them automatically.
 
-Dataset
+**Dataset**
 
 Source: ICRISAT District Level Data
 File: ICRISAT-District Level Data.csv
 Contains data on fertilizer consumption (Nitrogen, Phosphate, Potash) from 1966 to 2017 across various districts in India.
 
-Contributing
+**Contributing**
 Contributions are welcome! Please fork the repository and submit pull requests for any enhancements or bug fixes.
-License
+**License**
 This project is licensed under the MIT License - see the LICENSE.md file for details.
-Acknowledgments
+**Acknowledgments**
 
 Thanks to ICRISAT for providing the dataset.
 Inspired by the need to understand agricultural trends in India.

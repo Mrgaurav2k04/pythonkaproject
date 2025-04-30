@@ -1,5 +1,7 @@
-Fertilizer Consumption Analysis Project
+**Fertilizer Consumption Analysis Project**
+
 **Overview**
+
 This project analyzes fertilizer consumption data at the district level in India, utilizing data from ICRISAT. The analysis includes trends over time, state-wise comparisons, and visualizations of Nitrogen, Phosphate, and Potash (NPK) usage.
 
 **Features**
@@ -47,9 +49,13 @@ File: ICRISAT-District Level Data.csv
 Contains data on fertilizer consumption (Nitrogen, Phosphate, Potash) from 1966 to 2017 across various districts in India.
 
 **Contributing**
+
 Contributions are welcome! Please fork the repository and submit pull requests for any enhancements or bug fixes.
+
 **License**
+
 This project is licensed under the MIT License - see the LICENSE.md file for details.
+
 **Acknowledgments**
 
 Thanks to ICRISAT for providing the dataset.

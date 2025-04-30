@@ -6,9 +6,9 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 
 # Dark theme for aesthetics
-plt.style.use("dark_background")
-sns.set_theme(style="darkgrid", palette="Set2", font_scale=1.2)
 
+sns.set_theme(style="darkgrid", palette="Set2", font_scale=1.2)
+plt.style.use("dark_background")
 # Load dataset
 df = pd.read_csv("ICRISAT-District Level Data.csv")
 
@@ -36,8 +36,8 @@ df.rename(columns={
     'TOTAL PER HA OF GCA (Kg per ha)': 'Total_per_ha_GCA'
 }, inplace=True)
 
-# Remove any rows with missing essential values
-df.dropna(subset=["Year", "State", "Total_tons"], inplace=True)
+# Fill missing essential values with zero
+df[["Year", "State", "Total_tons"]] = df[["Year", "State", "Total_tons"]].fillna(0)
 
 # 1. Total Fertilizer Consumption Over the Years
 yearly_totals = df.groupby("Year")["Total_tons"].sum().reset_index()

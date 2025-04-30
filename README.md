@@ -24,7 +24,7 @@ Seaborn: Statistical data visualization.
 
 **Installation**
 
-Clone the repository:git clone https://github.com/yourusername/fertilizer-analysis.git
+Clone the repository:git clone https://github.com/Mrgaurav2k04/Fertilizer-Consumption-Analysis-in-India
 
 
 Navigate to the project directory:cd fertilizer-analysis
